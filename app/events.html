@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AngularJS events</title>
+  </head>
+  <body>
+    <div ng-controller="MessageController">
+      <h4>Messages:</h4>
+      <ul>
+        <li ng-repeat="message in messages">
+          {{message.text}}
+        </li>
+      </ul>
+    </div>
+    <div ng-controller="StatsController">
+      <h4>Status:</h4>
+      <div>{{messages.length}} Message(s)</div>
+      <div>Status: <span style="color:{{statusColor}}">{{status}}</span></div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </body>
+</html>
